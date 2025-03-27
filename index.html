@@ -3,104 +3,316 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phase 1 Project</title>
-    <!-- Latest compiled and minified CSS -->
+    <title>Dog Breeds Info</title>
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
-    <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand mx-auto fs-3 fw-bolder" href="#">
+      <div class="container">
+        <a class="navbar-brand mx-auto fs-3 fw-bolder text-center" href="#">
           <img
             src="./assets/logo.svg"
             alt="Logo"
             width="75"
             height="60"
-            class="d-inline-block align-items-start mx-auto"
+            class="d-inline-block align-items-center"
           />
           DOG Breeds
         </a>
       </div>
     </nav>
 
-    <!-- Body Content -->
-    <div class="container-fluid">
-      <div class="row mt-5 p-3 mx-2 gap-1">
-        <div class="col-5 border p-3">
-          <h2>Search Dog by Breed</h2>
-          <div class="code-wrapper breeds p-3  border rounded  d-flex flex-wrap align-items-center gap-2">
-            <span class="code bg-secondary text-white p-2 rounded">
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row mt-4 p-3">
+        <!-- Search Section -->
+        <div class="col-lg-6 col-md-12 border p-3">
+          <h2 class="text-center">Search Dog by Breed</h2>
+          <div
+            class="breeds p-3 border rounded d-flex flex-wrap align-items-center gap-2"
+          >
+            <span
+              class="code bg-secondary text-white p-2 rounded w-100 text-center"
+            >
               https://dog.ceo/api/breed/
+             <form class="dog-form">
               <select class="dog-selector form-select d-inline-block w-auto">
                 <option value="affenpinscher">affenpinscher</option>
                 <option value="african">african</option>
                 <option value="airedale">airedale</option>
                 <option value="akita">akita</option>
                 <option value="appenzeller">appenzeller</option>
-                <option value="australian-kelpie">kelpie australian</option>
-                <option value="australian-shepherd">shepherd australian</option>
+                <option value="australian/kelpie">kelpie australian</option>
+                <option value="australian/shepherd">shepherd australian</option>
+                <option value="bakharwal/indian">indian bakharwal</option>
                 <option value="basenji">basenji</option>
                 <option value="beagle">beagle</option>
+                <option value="bluetick">bluetick</option>
+                <option value="borzoi">borzoi</option>
+                <option value="bouvier">bouvier</option>
                 <option value="boxer">boxer</option>
-                <option value="bulldog-english">english bulldog</option>
-                <option value="bulldog-french">french bulldog</option>
-                <option value="corgi-cardigan">cardigan corgi</option>
+                <option value="brabancon">brabancon</option>
+                <option value="briard">briard</option>
+                <option value="buhund/norwegian">norwegian buhund</option>
+                <option value="bulldog/boston">boston bulldog</option>
+                <option value="bulldog/english">english bulldog</option>
+                <option value="bulldog/french">french bulldog</option>
+                <option value="bullterrier/staffordshire">
+                  staffordshire bullterrier
+                </option>
+                <option value="cattledog/australian">
+                  australian cattledog
+                </option>
+                <option value="cavapoo">cavapoo</option>
+                <option value="chihuahua">chihuahua</option>
+                <option value="chippiparai/indian">indian chippiparai</option>
+                <option value="chow">chow</option>
+                <option value="clumber">clumber</option>
+                <option value="cockapoo">cockapoo</option>
+                <option value="collie/border">border collie</option>
+                <option value="coonhound">coonhound</option>
+                <option value="corgi/cardigan">cardigan corgi</option>
+                <option value="cotondetulear">cotondetulear</option>
+                <option value="dachshund">dachshund</option>
                 <option value="dalmatian">dalmatian</option>
-                <option value="dane-great">great dane</option>
+                <option value="dane/great">great dane</option>
+                <option value="danish/swedish">swedish danish</option>
+                <option value="deerhound/scottish">scottish deerhound</option>
+                <option value="dhole">dhole</option>
+                <option value="dingo">dingo</option>
                 <option value="doberman">doberman</option>
-                <option value="germanshepherd">german shepherd</option>
+                <option value="elkhound/norwegian">norwegian elkhound</option>
+                <option value="entlebucher">entlebucher</option>
+                <option value="eskimo">eskimo</option>
+                <option value="finnish/lapphund">lapphund finnish</option>
+                <option value="frise/bichon">bichon frise</option>
+                <option value="gaddi/indian">indian gaddi</option>
+                <option value="germanshepherd">germanshepherd</option>
+                <option value="greyhound/indian">indian greyhound</option>
+                <option value="greyhound/italian">italian greyhound</option>
+                <option value="groenendael">groenendael</option>
+                <option value="havanese">havanese</option>
+                <option value="hound/afghan">afghan hound</option>
+                <option value="hound/basset">basset hound</option>
+                <option value="hound/blood">blood hound</option>
+                <option value="hound/english">english hound</option>
+                <option value="hound/ibizan">ibizan hound</option>
+                <option value="hound/plott">plott hound</option>
+                <option value="hound/walker">walker hound</option>
                 <option value="husky">husky</option>
+                <option value="keeshond">keeshond</option>
+                <option value="kelpie">kelpie</option>
+                <option value="kombai">kombai</option>
+                <option value="komondor">komondor</option>
+                <option value="kuvasz">kuvasz</option>
+                <option value="labradoodle">labradoodle</option>
                 <option value="labrador">labrador</option>
+                <option value="leonberg">leonberg</option>
+                <option value="lhasa">lhasa</option>
+                <option value="malamute">malamute</option>
+                <option value="malinois">malinois</option>
+                <option value="maltese">maltese</option>
+                <option value="mastiff/bull">bull mastiff</option>
+                <option value="mastiff/english">english mastiff</option>
+                <option value="mastiff/indian">indian mastiff</option>
+                <option value="mastiff/tibetan">tibetan mastiff</option>
+                <option value="mexicanhairless">mexicanhairless</option>
+                <option value="mix">mix</option>
+                <option value="mountain/bernese">bernese mountain</option>
+                <option value="mountain/swiss">swiss mountain</option>
+                <option value="mudhol/indian">indian mudhol</option>
+                <option value="newfoundland">newfoundland</option>
+                <option value="otterhound">otterhound</option>
+                <option value="ovcharka/caucasian">caucasian ovcharka</option>
+                <option value="papillon">papillon</option>
+                <option value="pariah/indian">indian pariah</option>
+                <option value="pekinese">pekinese</option>
+                <option value="pembroke">pembroke</option>
+                <option value="pinscher/miniature">miniature pinscher</option>
+                <option value="pitbull">pitbull</option>
+                <option value="pointer/german">german pointer</option>
+                <option value="pointer/germanlonghair">
+                  germanlonghair pointer
+                </option>
                 <option value="pomeranian">pomeranian</option>
-                <option value="poodle-standard">standard poodle</option>
+                <option value="poodle/medium">medium poodle</option>
+                <option value="poodle/miniature">miniature poodle</option>
+                <option value="poodle/standard">standard poodle</option>
+                <option value="poodle/toy">toy poodle</option>
                 <option value="pug">pug</option>
+                <option value="puggle">puggle</option>
+                <option value="pyrenees">pyrenees</option>
+                <option value="rajapalayam/indian">indian rajapalayam</option>
+                <option value="redbone">redbone</option>
+                <option value="retriever/chesapeake">
+                  chesapeake retriever
+                </option>
+                <option value="retriever/curly">curly retriever</option>
+                <option value="retriever/flatcoated">
+                  flatcoated retriever
+                </option>
+                <option value="retriever/golden">golden retriever</option>
+                <option value="ridgeback/rhodesian">rhodesian ridgeback</option>
                 <option value="rottweiler">rottweiler</option>
+                <option value="saluki">saluki</option>
+                <option value="samoyed">samoyed</option>
+                <option value="schipperke">schipperke</option>
+                <option value="schnauzer/giant">giant schnauzer</option>
+                <option value="schnauzer/miniature">miniature schnauzer</option>
+                <option value="segugio/italian">italian segugio</option>
+                <option value="setter/english">english setter</option>
+                <option value="setter/gordon">gordon setter</option>
+                <option value="setter/irish">irish setter</option>
+                <option value="sharpei">sharpei</option>
+                <option value="sheepdog/english">english sheepdog</option>
+                <option value="sheepdog/indian">indian sheepdog</option>
+                <option value="sheepdog/shetland">shetland sheepdog</option>
                 <option value="shiba">shiba</option>
                 <option value="shihtzu">shihtzu</option>
-                <option value="terrier-yorkshire">yorkshire terrier</option>
+                <option value="spaniel/blenheim">blenheim spaniel</option>
+                <option value="spaniel/brittany">brittany spaniel</option>
+                <option value="spaniel/cocker">cocker spaniel</option>
+                <option value="spaniel/irish">irish spaniel</option>
+                <option value="spaniel/japanese">japanese spaniel</option>
+                <option value="spaniel/sussex">sussex spaniel</option>
+                <option value="spaniel/welsh">welsh spaniel</option>
+                <option value="spitz/indian">indian spitz</option>
+                <option value="spitz/japanese">japanese spitz</option>
+                <option value="springer/english">english springer</option>
+                <option value="stbernard">stbernard</option>
+                <option value="terrier/american">american terrier</option>
+                <option value="terrier/australian">australian terrier</option>
+                <option value="terrier/bedlington">bedlington terrier</option>
+                <option value="terrier/border">border terrier</option>
+                <option value="terrier/cairn">cairn terrier</option>
+                <option value="terrier/dandie">dandie terrier</option>
+                <option value="terrier/fox">fox terrier</option>
+                <option value="terrier/irish">irish terrier</option>
+                <option value="terrier/kerryblue">kerryblue terrier</option>
+                <option value="terrier/lakeland">lakeland terrier</option>
+                <option value="terrier/norfolk">norfolk terrier</option>
+                <option value="terrier/norwich">norwich terrier</option>
+                <option value="terrier/patterdale">patterdale terrier</option>
+                <option value="terrier/russell">russell terrier</option>
+                <option value="terrier/scottish">scottish terrier</option>
+                <option value="terrier/sealyham">sealyham terrier</option>
+                <option value="terrier/silky">silky terrier</option>
+                <option value="terrier/tibetan">tibetan terrier</option>
+                <option value="terrier/toy">toy terrier</option>
+                <option value="terrier/welsh">welsh terrier</option>
+                <option value="terrier/westhighland">
+                  westhighland terrier
+                </option>
+                <option value="terrier/wheaten">wheaten terrier</option>
+                <option value="terrier/yorkshire">yorkshire terrier</option>
+                <option value="tervuren">tervuren</option>
+                <option value="vizsla">vizsla</option>
+                <option value="waterdog/spanish">spanish waterdog</option>
+                <option value="weimaraner">weimaraner</option>
+                <option value="whippet">whippet</option>
+                <option value="wolfhound/irish">irish wolfhound</option>
               </select>
+            
               /images/random
             </span>
-            <a href="javascript:void(0);" class="btn btn-primary get-dog">Submit</a>
+            <a type="submit" class="btn btn-primary  text-center get-dog"
+              >Submit</a
+            >
+          </form>
           </div>
-          
-          <h2>Facts on Dog Breeds</h2>
-          <div class="col-md-8 ">
-            <ul class="list-group">
-                <li class="list-group-item "><strong class="text-black">Basenji –</strong> The only dog that doesn’t bark, but yodels!</li>
-                <li class="list-group-item"><strong class="text-black">Dalmatian Puppies –</strong> Born completely white; spots develop later.</li>
-                <li class="list-group-item"><strong class="text-black">Chow Chow –</strong> Has a rare blue-black tongue, like the Shar Pei.</li>
-                <li class="list-group-item"><strong class="text-black">Newfoundland –</strong> Natural lifeguards with webbed feet for swimming.</li>
-                <li class="list-group-item"><strong class="text-black">Afghan Hound –</strong> Their long, silky fur keeps them warm in cold regions.</li>
-                <li class="list-group-item"><strong class="text-black">Greyhound –</strong> Can outrun a cheetah over long distances!</li>
-                <li class="list-group-item"><strong class="text-black">Labrador Retriever –</strong> Has an "otter tail" for swimming.</li>
-                <li class="list-group-item"><strong class="text-black">Corgis –</strong> Once used as Viking war dogs!</li>
-                <li class="list-group-item"><strong class="text-black">Boxers –</strong> Got their name because they "box" with their front paws.</li>
-                <li class="list-group-item"><strong class="text-black">Great Dane –</strong> Originally bred for hunting wild boars.</li>
-                <li class="list-group-item"><strong class="text-black">Huskies –</strong> Can survive in freezing temperatures as low as -75°F.</li>
-                <li class="list-group-item"><strong class="text-black">Dachshund –</strong> Originally bred to hunt badgers.</li>
-                <li class="list-group-item"><strong class="text-black">Shiba Inu –</strong> Famous for their loud "Shiba scream" when excited.</li>
-                <li class="list-group-item"><strong class="text-black">Poodle –</strong> Originally bred as water retrievers, not just show dogs!</li>
-                <li class="list-group-item"><strong class="text-black">Border Collie –</strong> The smartest breed; some can learn 1,000+ words.</li>
-            </ul>
+
+          <h2 class="mt-4 text-center">Facts on Dog Breeds</h2>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Basenji –</strong> The only dog that doesn’t bark, but
+              yodels!
+            </li>
+            <li class="list-group-item">
+              <strong>Dalmatian Puppies –</strong> Born completely white; spots
+              develop later.
+            </li>
+            <li class="list-group-item">
+              <strong>Chow Chow –</strong> Has a rare blue-black tongue, like
+              the Shar Pei.
+            </li>
+            <li class="list-group-item">
+              <strong>Newfoundland –</strong> Natural lifeguards with webbed
+              feet for swimming.
+            </li>
+            <li class="list-group-item">
+              <strong>Afghan Hound –</strong> Their long, silky fur keeps them
+              warm in cold regions.
+            </li>
+            <li class="list-group-item">
+              <strong>Greyhound –</strong> Can outrun a cheetah over long
+              distances!
+            </li>
+            <li class="list-group-item">
+              <strong>Labrador Retriever –</strong> Has an "otter tail" for
+              swimming.
+            </li>
+            <li class="list-group-item">
+              <strong>Corgis –</strong> Once used as Viking war dogs!
+            </li>
+            <li class="list-group-item">
+              <strong>Boxers –</strong> Got their name because they "box" with
+              their front paws.
+            </li>
+            <li class="list-group-item">
+              <strong>Great Dane –</strong> Originally bred for hunting wild
+              boars.
+            </li>
+            <li class="list-group-item">
+              <strong>Huskies –</strong> Can survive in freezing temperatures as
+              low as -75°F.
+            </li>
+            <li class="list-group-item">
+              <strong>Dachshund –</strong> Originally bred to hunt badgers.
+            </li>
+            <li class="list-group-item">
+              <strong>Shiba Inu –</strong> Famous for their loud "Shiba scream"
+              when excited.
+            </li>
+            <li class="list-group-item">
+              <strong>Poodle –</strong> Originally bred as water retrievers, not
+              just show dogs!
+            </li>
+            <li class="list-group-item">
+              <strong>Border Collie –</strong> The smartest breed; some can
+              learn 1,000+ words.
+            </li>
+          </ul>
         </div>
-        </div>
-        <div class="col-6 border p-3">
-          <img class="my-3 d-flex" src="" alt="Dog Image" id="image-2"/>
-          <button class="btn btn-warning mt-3">Read More</button>
+
+        <!-- Dog Image Section -->
+        <div class="col-lg-6 col-md-12 border p-3 text-center">
+          <p id="message" style="color: red; font-weight: bold; background-color: aliceblue;"></p> 
+          <img
+            class="img-fluid my-3 rounded shadow-lg"
+            src=""
+            alt="Dog Image"
+            id="image-2"
+          />
+          <button
+            class="btn btn-warning list-sub-breeds  d-flex justify-content-center mx-auto"
+          >
+            Fetch Sub-Breeds
+          </button>
+          <p id="message" style="color: red; font-weight: bold;"></p>
+        <ul id="sub-breed-list" style="margin-top: 10px; font-weight: bold;"></ul> <!-- Sub-Breeds List -->
         </div>
       </div>
     </div>
 
-    <!-- Link to Javascript  -->
+    <!-- JavaScript -->
     <script src="./src/index.js"></script>
   </body>
 </html>
