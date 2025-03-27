@@ -6,24 +6,24 @@
 //   at least one instance of array iteration
 
 document.addEventListener("DOMContentLoaded", () => {
-    const getDogBtn = document.querySelector(".get-dog"); // Button to fetch dog image
-    const breedSelector = document.querySelector(".dog-selector"); // Breed selector dropdown
-    const imgElement = document.getElementById("image-2"); // Image tag
-    const messageContainer = document.getElementById("message"); // Where we show errors
-    const subBreedBtn = document.querySelector(".list-sub-breeds"); // Button to get sub-breeds
-    const subBreedList = document.getElementById("sub-breed-list"); // Where we list sub-breeds
+    const form = document.querySelector(".dog-form"); 
+    const breedSelector = document.querySelector(".dog-selector"); 
+    const imgElement = document.getElementById("image-2");
+    const messageContainer = document.getElementById("message"); 
+    const subBreedBtn = document.querySelector(".list-sub-breeds"); 
+    const subBreedList = document.getElementById("sub-breed-list"); 
 
-    // Function to format breed name correctly
+    // Function to format breed name 
     function formatBreedName(breed) {
         let parts = breed.toLowerCase().split(" ");
         if (parts.length > 1) {
-            return `${parts[1]}/${parts[0]}`;  // Convert "kerryblue terrier" → "terrier/kerryblue"
+            return `${parts[1]}/${parts[0]}`;  // Convert "kerryblue terrier" => "terrier/kerryblue"
         }
         return parts[0];  // Single-word breeds remain unchanged
     }
     
     // Fetch Dog Image
-    getDogBtn.addEventListener("click", (event) => {
+    form.addEventListener("submit", (event) => {
         event.preventDefault();
     
         const selectedBreed = breedSelector.value.trim();
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
     
-        const formattedBreed = formatBreedName(selectedBreed);
+        const formattedBreed = formatBreedName(selectedBreed); //Invoke the function to format breed name 
         const imageUrl = `https://dog.ceo/api/breed/${formattedBreed}/images/random`;
     
         fetch(imageUrl)
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch Sub-Breeds
     subBreedBtn.addEventListener("click", () => {
-        const selectedBreed = breedSelector.value.trim();
+        const selectedBreed = breedSelector.value.trim();//get Sub Breeds for the breed we selected
         if (!selectedBreed) {
             subBreedList.innerHTML = `<li>Please select a breed first!</li>`;
             return;
