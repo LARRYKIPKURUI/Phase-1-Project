@@ -34,26 +34,67 @@
     <!-- Body Content -->
     <div class="container-fluid">
       <div class="row mt-5 p-3 mx-2 gap-1">
-        <div class="col-5 border  p-3">
+        <div class="col-5 border p-3">
           <h2>Search Dog by Breed</h2>
-          <form class="d-flex my-3" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-primary" type="submit">
-              Search
-            </button>
-          </form>
-          <h2>List of Breeds</h2>
-            <ul>
-                <li></li>
+          <div class="code-wrapper breeds p-3  border rounded  d-flex flex-wrap align-items-center gap-2">
+            <span class="code bg-secondary text-white p-2 rounded">
+              https://dog.ceo/api/breed/
+              <select class="dog-selector form-select d-inline-block w-auto">
+                <option value="affenpinscher">affenpinscher</option>
+                <option value="african">african</option>
+                <option value="airedale">airedale</option>
+                <option value="akita">akita</option>
+                <option value="appenzeller">appenzeller</option>
+                <option value="australian-kelpie">kelpie australian</option>
+                <option value="australian-shepherd">shepherd australian</option>
+                <option value="basenji">basenji</option>
+                <option value="beagle">beagle</option>
+                <option value="boxer">boxer</option>
+                <option value="bulldog-english">english bulldog</option>
+                <option value="bulldog-french">french bulldog</option>
+                <option value="corgi-cardigan">cardigan corgi</option>
+                <option value="dalmatian">dalmatian</option>
+                <option value="dane-great">great dane</option>
+                <option value="doberman">doberman</option>
+                <option value="germanshepherd">german shepherd</option>
+                <option value="husky">husky</option>
+                <option value="labrador">labrador</option>
+                <option value="pomeranian">pomeranian</option>
+                <option value="poodle-standard">standard poodle</option>
+                <option value="pug">pug</option>
+                <option value="rottweiler">rottweiler</option>
+                <option value="shiba">shiba</option>
+                <option value="shihtzu">shihtzu</option>
+                <option value="terrier-yorkshire">yorkshire terrier</option>
+              </select>
+              /images/random
+            </span>
+            <a href="javascript:void(0);" class="btn btn-primary get-dog">Submit</a>
+          </div>
+          
+          <h2>Facts on Dog Breeds</h2>
+          <div class="col-md-8 ">
+            <ul class="list-group">
+                <li class="list-group-item "><strong class="text-black">Basenji –</strong> The only dog that doesn’t bark, but yodels!</li>
+                <li class="list-group-item"><strong class="text-black">Dalmatian Puppies –</strong> Born completely white; spots develop later.</li>
+                <li class="list-group-item"><strong class="text-black">Chow Chow –</strong> Has a rare blue-black tongue, like the Shar Pei.</li>
+                <li class="list-group-item"><strong class="text-black">Newfoundland –</strong> Natural lifeguards with webbed feet for swimming.</li>
+                <li class="list-group-item"><strong class="text-black">Afghan Hound –</strong> Their long, silky fur keeps them warm in cold regions.</li>
+                <li class="list-group-item"><strong class="text-black">Greyhound –</strong> Can outrun a cheetah over long distances!</li>
+                <li class="list-group-item"><strong class="text-black">Labrador Retriever –</strong> Has an "otter tail" for swimming.</li>
+                <li class="list-group-item"><strong class="text-black">Corgis –</strong> Once used as Viking war dogs!</li>
+                <li class="list-group-item"><strong class="text-black">Boxers –</strong> Got their name because they "box" with their front paws.</li>
+                <li class="list-group-item"><strong class="text-black">Great Dane –</strong> Originally bred for hunting wild boars.</li>
+                <li class="list-group-item"><strong class="text-black">Huskies –</strong> Can survive in freezing temperatures as low as -75°F.</li>
+                <li class="list-group-item"><strong class="text-black">Dachshund –</strong> Originally bred to hunt badgers.</li>
+                <li class="list-group-item"><strong class="text-black">Shiba Inu –</strong> Famous for their loud "Shiba scream" when excited.</li>
+                <li class="list-group-item"><strong class="text-black">Poodle –</strong> Originally bred as water retrievers, not just show dogs!</li>
+                <li class="list-group-item"><strong class="text-black">Border Collie –</strong> The smartest breed; some can learn 1,000+ words.</li>
             </ul>
         </div>
+        </div>
         <div class="col-6 border p-3">
-          <img class="my-3 d-flex" src="" alt="Dog Image" />
+          <img class="my-3 d-flex" src="" alt="Dog Image" id="image-2"/>
           <button class="btn btn-warning mt-3">Read More</button>
         </div>
       </div>

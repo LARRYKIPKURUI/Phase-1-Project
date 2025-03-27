@@ -3,3 +3,8 @@ body,nav {
     background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
     color: black;
 }
+
+.list-group-item {
+    background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+    color:white;
+}
