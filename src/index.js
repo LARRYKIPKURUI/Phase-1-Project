@@ -22,6 +22,26 @@ document.addEventListener("DOMContentLoaded", () => {
         return parts[0];  // Single-word breeds remain unchanged
     }
     
+    //Fetch Breed Names and Display them on the select option 
+    fetch('https://dog.ceo/api/breeds/list/all')
+    .then(response => {
+        if(!response.ok) {
+            throw new Error ("404");
+        }
+        return response.json();
+    })
+    .then(data => {
+        const dogSelector = document.getElementById("dog-selector");
+        if (data.message) {
+            Object.keys(data.message).forEach(breed => {  //data.message is an object,,so I traverse first
+                const option = document.createElement("option");
+                option.textContent = breed;
+                dogSelector.appendChild(option);
+            });
+        }
+        
+    })
+
     // Fetch Dog Image
     form.addEventListener("submit", (event) => {
         event.preventDefault();
